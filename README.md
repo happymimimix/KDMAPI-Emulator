@@ -124,3 +124,34 @@ You should place the 32bit version of my wrapper dll in `C:\Windows\SysWOW64` to
 
 Always remember that System32 stores 64bit libraries! Do not place 32bit libraries in System32, they will NOT work. 
 You should put 32bit libraries in SysWOW64! 
+
+# Use the app specific winmm patch when applying KDMAPI wrapper globally
+I strongly suggest you go for the more complex but more stable global winmm patch method if you want to use my KDMAPI wrapper globally.
+
+Also, my modified Windows image Lindows 11.1 Pro will be released very soon in the near future featuring a pre-patched winmmbase.dll ready to use out of the box together with a complete driver signature enforcement kill. 
+
+You could make a kernel mode midi driver on Lindows 11.1 if you want to. Driver signature enforcement has been completely doomed on Lindows 11.1 and you'll not suffer for DSE ever again. 
+
+If you don't want to wait long for the release of Lindows 11.1 and also don't want to spend time patching winmmbase.dll on your own, there is very fortunately still a method that you can use: 
+
+1. Download the app specific pure winmm patch here:
+[For_64bit.zip](https://github.com/user-attachments/files/20381898/For_64bit.zip)
+[For_32bit.zip](https://github.com/user-attachments/files/20381897/For_32bit.zip)
+
+2. Rename the dll and make sure the new name is not longer than 5 characters. For example `wmm++.dll`.
+  Be aware that any name more than 5 characters WILL FAIL! Do NOT use a name like `WinmmBut1000xFaster.dll`!
+
+3. Download CFF Explorer from here: https://ntcore.com/explorer-suite/
+
+4. Load my wrapper dll into CFF Explorer
+
+5. Locate WINMM.dll in Import Directory: 
+![image](https://github.com/user-attachments/assets/f1a986f4-1086-4e40-9056-475d1f17d48a)
+
+6. Double click on the dll name to rename it:
+![image](https://github.com/user-attachments/assets/f2373643-38e3-48b0-a275-9aed619664ae)
+
+7. Save the modified wrapper dll
+![image](https://github.com/user-attachments/assets/3407a39c-3c87-4e6d-bade-9381f25be23a)
+
+Finally, place the modified wrapper dll and the renamed pure winmm patch dll in System32 and enjoy!
