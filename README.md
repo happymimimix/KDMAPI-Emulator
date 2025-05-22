@@ -30,7 +30,7 @@ Here, I present to you the "KDMAPI Simulator".
 With this fake OmniMIDI.dll you can let these KDMAPI exclusive midi players use winmm and allow for the selection of a much wider range of midi output devices such as Virtual MIDI Synth, Loop MIDI, or Microsoft GS Wavetable Synth. 
 
 # The limits of this wrapper
-Majority of the KDMAPI exclusive midi players should work file with my wrapper dll but there are a few exceptions: 
+Majority of the KDMAPI exclusive midi players should work fine with my wrapper dll but there are a few exceptions: 
 
 1. It's not possible to do NoBuf in winmm.
   - OmniMIDI provides a SendDirectDataNoBuf() function in KDMAPI that disables buffering, but unfortunately that is not possible with winmm.
