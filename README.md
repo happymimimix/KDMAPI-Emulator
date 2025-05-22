@@ -169,3 +169,7 @@ If you don't want to wait long for the release of Lindows 11.1 and also don't wa
 ![image](https://github.com/user-attachments/assets/3407a39c-3c87-4e6d-bade-9381f25be23a)
 
 Finally, place the modified wrapper dll and the renamed pure winmm patch dll in System32 and enjoy!
+
+# Speed benchmark
+Below is a demonstration of using my KDMAPI Simulator to redirect KDMAPI function calls to winmm and output using Visual MIDI Synth 2.13.9. 
+Perfectly no-laged TSMB2's 9K\*2 black midi! 
