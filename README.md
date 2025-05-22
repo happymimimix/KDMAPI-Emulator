@@ -49,6 +49,7 @@ Majority of the KDMAPI exclusive midi players should work file with my wrapper d
 - [x] Piano From Above VIZ Khang
 - [ ] Mmidi (Audio seems to be fine but has some weird visual glitches that I have no idea what caused it)
 - [x] KDMAPI Passthrough VST Plugin For Fl Studio
+      ![image](https://github.com/user-attachments/assets/24f69203-436e-485d-b52e-3c0b54d2dd3a)
 - [x] Zig MIDI Player
       ![image](https://github.com/user-attachments/assets/cb27b097-4def-40b6-9a16-15457994d9cb)
 - [x] Wasabi
