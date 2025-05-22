@@ -52,3 +52,43 @@ Majority of the KDMAPI exclusive midi players should work file with my wrapper d
 - [x] Zig MIDI Player
 - [x] Wasabi
 
+# For Windows 8 and above
+Microsoft changed how EnterCriticalSection() and LeaveCriticalSection() works in Windows 8 which makes winmm super super slow. 
+
+But you know what, winmm don't actually need EnterCriticalSection() and LeaveCriticalSection() at all! 
+
+Not even Microsoft itself realizes that the winmm functions are actually THREAD SAFE. 
+
+Locking the thread on every single note is just a pure waste of time. 
+
+You can of course hack winmm.dll using IDA Pro and remove all EnterCriticalSection() and LeaveCriticalSection() function calls, and all your midi players will still work perfectly fine. 
+
+I made a patch for 22000.1's winmmbase.dll in my Lindows 11.1 project, you can take a look at my patched IDA database: https://github.com/happymimimix/Lindows_11.1-Post_Reset/tree/master/winmm.dll
+
+If you are also using this exact same build of windows, you can download the pre-patched winmmbase.dll in my repository and replace the one on your device.
+
+However, if you are using any other version of windows, even if the build number differs by only 1, this will NOT work!
+
+If you are using another build of windows, 22000.4 for example, you can use my IDA database as a reference and make your own patch.
+
+You cannot patch any winmmbase.dll by loading my database in IDA Pro and click 'Apply patches to input file', it won't work! My database is created for that exact build only. You must create your own database and make your own patches. 
+
+What you could do is use my database as a reference and ONLY AS A REFERENCE. Disassemble the winmm.dll on your build and open my database in a new window. Place the two windows side by side and check what's different between the two databases. 
+
+# An easier way to patch
+If you think disassembling and patching winmmbase.dll on your own is way too hard for you, I also have another solution: The pure winmm wrapper method. 
+
+Be aware that this method does NOT apply globally and requires you to patch every single app that you're using.
+
+You're all very familar with the traditional winmm wrapper that redirects function calls to KDMAPI right? 
+
+This "pure" winmm wrapper functions in a similar way but provides support for ALL midi output devices.
+
+You can download this patch here: 
+[For_64bit.zip](https://github.com/user-attachments/files/20381898/For_64bit.zip)
+[For_32bit.zip](https://github.com/user-attachments/files/20381897/For_32bit.zip)
+
+# Installation
+There are two different methods for installing this kdmapi wrapper. 
+
+The first 
