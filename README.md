@@ -50,7 +50,10 @@ Majority of the KDMAPI exclusive midi players should work file with my wrapper d
 - [ ] Mmidi (Audio seems to be fine but has some weird visual glitches that I have no idea what caused it)
 - [x] KDMAPI Passthrough VST Plugin For Fl Studio
 - [x] Zig MIDI Player
+      ![image](https://github.com/user-attachments/assets/cb27b097-4def-40b6-9a16-15457994d9cb)
 - [x] Wasabi
+      ![image](https://github.com/user-attachments/assets/25f9097f-35f0-4822-8a85-226fc7324c6f)
+
 
 # For Windows 8 and above
 Microsoft changed how EnterCriticalSection() and LeaveCriticalSection() works in Windows 8 which makes winmm super super slow. 
