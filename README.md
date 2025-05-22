@@ -145,13 +145,16 @@ If you don't want to wait long for the release of Lindows 11.1 and also don't wa
 
 4. Load my wrapper dll into CFF Explorer
 
-5. Locate WINMM.dll in Import Directory: 
+5. Locate WINMM.dll in Import Directory:
+
 ![image](https://github.com/user-attachments/assets/f1a986f4-1086-4e40-9056-475d1f17d48a)
 
-6. Double click on the dll name to rename it:
+7. Double click on the dll name to rename it:
+
 ![image](https://github.com/user-attachments/assets/f2373643-38e3-48b0-a275-9aed619664ae)
 
-7. Save the modified wrapper dll
+9. Save the modified wrapper dll
+
 ![image](https://github.com/user-attachments/assets/3407a39c-3c87-4e6d-bade-9381f25be23a)
 
 Finally, place the modified wrapper dll and the renamed pure winmm patch dll in System32 and enjoy!
