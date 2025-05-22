@@ -1,4 +1,6 @@
 # KDMAPI Emulator | Wrapping KDMAPI back to winmm! 
+![image](https://github.com/user-attachments/assets/1bc7c6dc-1950-48d5-97cd-f395f73aa052)
+
 Recently, coolsoft released Virtual MIDI Synth 2.13.9 which improved the speed of the driver massively. 
 
 Virtual MIDI Synth 2.13.9 is almost as fast as OmniMIDI!
