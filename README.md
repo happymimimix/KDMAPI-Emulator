@@ -43,10 +43,12 @@ Majority of the KDMAPI exclusive midi players should work file with my wrapper d
   - If you need to edit the configuration & soundfont list, you should use the configurator provided by the midi synth that you're using instead of trying to manipulate the synth config through KDMAPI.
 
 # App compatibility list
-[*] Zenith
-[*] Kiva
-[*] Piano-FX Pro
-[*] Piano From Above VIZ Khang
-[ ] Mmidi (Audio seems to be fine but has some weird visual glitches that I have no idea what caused it)
-[*] KDMAPI Passthrough VST Plugin For Fl Studio
-[*] Wasabi
+- [x] Zenith
+- [x] Kiva (Safe because Kiva used other methods to grab OmniMIDI's sound font list that does not require KDMAPI)
+- [x] Piano-FX Pro
+- [x] Piano From Above VIZ Khang
+- [ ] Mmidi (Audio seems to be fine but has some weird visual glitches that I have no idea what caused it)
+- [x] KDMAPI Passthrough VST Plugin For Fl Studio
+- [x] Zig MIDI Player
+- [x] Wasabi
+
