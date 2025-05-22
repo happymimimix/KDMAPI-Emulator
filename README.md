@@ -174,7 +174,7 @@ Finally, place the modified wrapper dll and the renamed pure winmm patch dll in 
 Below is a demonstration of using my KDMAPI Simulator to redirect KDMAPI function calls to winmm and output using Visual MIDI Synth 2.13.9. 
 Perfectly no-laged TSMB2's 9K\*2 black midi! 
 
-https://github.com/user-attachments/assets/083eb2e5-995e-4abe-9e81-6a538a9aae85
+https://github.com/user-attachments/assets/7dabefa4-cb4a-4a3e-b14a-31b01a47c7cc
 
 Note: Because of github's file size limit, I need to compress the video really hard to fit everything within the size limit. 
 
