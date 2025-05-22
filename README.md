@@ -89,6 +89,38 @@ You can download this patch here:
 [For_32bit.zip](https://github.com/user-attachments/files/20381897/For_32bit.zip)
 
 # Installation
-There are two different methods for installing this kdmapi wrapper. 
+There are two different methods for installing this KDMAPI wrapper. 
 
-The first 
+The first method is to place my wrapper dll in `C:\Windows\System32`. 
+
+This will apply this wrapper globally for all midi players but will conflict with the real KDMAPI. 
+
+If you want to keep the real KDMAPI for most apps, only wraping a few specific apps. 
+Then you can place my wrapper dll in the same directory as the executable file of your midi player. 
+
+This way the KMDAPI wrapper is only available to these specific apps that you applied it to, all the other apps won't be affected. 
+
+### Note: 
+Some midi players like to access OmniMIDI.dll using an absolute path `C:\Windows\System32\OmniMIDI\OmniMIDI.dll` such as Zenith and Kiva. 
+
+In this case, you can create a symbolic link to make sure the wrapper works correctly for these apps by running the following commands in CMD: 
+```
+mkdir C:\Windows\System32\OmniMIDI
+mklink C:\Windows\System32\OmniMIDI\OmniMIDI.dll C:\Windows\System32\OmniMIDI.dll /H
+```
+
+# For 32bit apps
+I think it's very unlikely for someone to create a 32bit black midi player.
+
+It's 2025 and who the f\*\*k in this world still don't have a 64bit processor and need to suffer for the 32bit 4GB RAM limit?
+
+However, I'll still provide support for them just in case. 
+
+When running a 32bit app on 64bit Windows, the app will be accessing `C:\Windows\SysWOW64\OmniMIDI.dll` instead of `C:\Windows\System32\OmniMIDI.dll`. 
+
+Why 32bit libraries are placed in SysWOW64 and 64bit libraries are placed in System32? I don't know, you should blame Microsoft for picking this confusing name! 
+
+You should place the 32bit version of my wrapper dll in `C:\Windows\SysWOW64` to make 32bit apps work correctly. 
+
+Always remember that System32 stores 64bit libraries! Do not place 32bit libraries in System32, they will NOT work. 
+You should put 32bit libraries in SysWOW64! 
