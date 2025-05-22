@@ -1,4 +1,4 @@
-# KDMAPI Emulator | Wrapping KDMAPI back to winmm! 
+# KDMAPI Simulator | Wrapping KDMAPI back to winmm! 
 ![image](https://github.com/user-attachments/assets/14c1a00c-cc04-408f-a215-60ed3cb8479b)
 
 Recently, coolsoft released Virtual MIDI Synth 2.13.9 which improved the speed of the driver massively. 
@@ -25,7 +25,7 @@ Then I had this idea: Is it possible to do the reverse? Wrapping KDMAPI back to 
 
 The answer is YES! You can wrap KDMAPI back to winmm in the exact same way as how people wrap winmm to KDMAPI. 
 
-Here, I present to you the "KDMAPI Emulator".
+Here, I present to you the "KDMAPI Simulator".
 
 With this fake OmniMIDI.dll you can let these KDMAPI exclusive midi players use winmm and allow for the selection of a much wider range of midi output devices such as Virtual MIDI Synth, Loop MIDI, or Microsoft GS Wavetable Synth. 
 
