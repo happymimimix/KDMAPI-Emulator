@@ -44,7 +44,9 @@ Majority of the KDMAPI exclusive midi players should work file with my wrapper d
 
 # App compatibility list
 - [x] Zenith
+      ![image](https://github.com/user-attachments/assets/e086b76b-e93c-4cce-9430-cb1da8bff920)
 - [x] Kiva (Safe because Kiva used other methods to grab OmniMIDI's sound font list that does not require KDMAPI)
+      ![image](https://github.com/user-attachments/assets/6a7a6492-c32b-4ba4-9551-7623865f1605)
 - [x] Piano-FX Pro
       ![image](https://github.com/user-attachments/assets/7366a87d-97b0-4c78-bc46-c373a205a63b)
 - [x] Piano From Above VIZ Khang
